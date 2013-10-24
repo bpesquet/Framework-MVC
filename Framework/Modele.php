@@ -3,9 +3,9 @@
 require_once 'Configuration.php';
 
 /**
- * Classe abstraite Modèle.
+ * Classe abstraite modèle.
  * Centralise les services d'accès à une base de données.
- * Utilise l'API PDO de PHP
+ * Utilise l'API PDO de PHP.
  *
  * @author Baptiste Pesquet
  */

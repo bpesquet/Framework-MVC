@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Classe de gestion des paramètres de configuration
- * 
+ * Classe de gestion des paramètres de configuration.
  * Inspirée du SimpleFramework de Frédéric Guillot
  * (https://github.com/fguillot/simpleFramework)
  *

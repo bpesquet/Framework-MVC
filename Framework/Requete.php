@@ -3,7 +3,7 @@
 require_once 'Session.php';
 
 /**
- * Classe modélisant une requête HTTP entrante
+ * Classe modélisant une requête HTTP entrante.
  * 
  * @author Baptiste Pesquet
  */

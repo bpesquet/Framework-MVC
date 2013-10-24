@@ -3,7 +3,7 @@
 require_once 'Configuration.php';
 
 /**
- * Classe modélisant une vue
+ * Classe modélisant une vue.
  *
  * @author Baptiste Pesquet
  */

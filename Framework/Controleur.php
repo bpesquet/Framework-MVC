@@ -5,8 +5,8 @@ require_once 'Requete.php';
 require_once 'Vue.php';
 
 /**
- * Classe abstraite Controleur
- * Fournit des services communs aux classes Controleur dérivées
+ * Classe abstraite contrôleur. 
+ * Fournit des services communs aux classes contrôleurs dérivées.
  * 
  * @author Baptiste Pesquet
  */
