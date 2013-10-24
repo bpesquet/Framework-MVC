@@ -1,6 +1,5 @@
 <?php
 
-require_once 'Configuration.php';
 require_once 'Requete.php';
 require_once 'Vue.php';
 
@@ -8,14 +7,14 @@ require_once 'Vue.php';
  * Classe abstraite Controleur
  * Fournit des services communs aux classes Controleur dérivées
  * 
- * @version 1.1
+ * @version 1.0
  * @author Baptiste Pesquet
  */
-abstract class Controleur
-{
+abstract class Controleur {
+
     /** Action à réaliser */
     private $action;
-
+    
     /** Requête entrante */
     protected $requete;
 
@@ -57,36 +56,16 @@ abstract class Controleur
      * Génère la vue associée au contrôleur courant
      * 
      * @param array $donneesVue Données nécessaires pour la génération de la vue
-     * @param string $action Action associée à la vue (permet à un contrôleur de générer une vue pour une action spécifique)
      */
-    protected function genererVue($donneesVue = array(), $action = null)
+    protected function genererVue($donneesVue = array())
     {
-        // Utilisation de l'action actuelle par défaut
-        $actionVue = $this->action;
-        if ($action != null) {
-            // Utilisation de l'action passée en paramètre
-            $actionVue = $action;
-        }
-        // Utilisation du nom du contrôleur actuel
+        // Détermination du nom du fichier vue à partir du nom du contrôleur actuel
         $classeControleur = get_class($this);
-        $controleurVue = str_replace("Controleur", "", $classeControleur);
-
-        // Instanciation et génération de la vue
-        $vue = new Vue($actionVue, $controleurVue);
+        $controleur = str_replace("Controleur", "", $classeControleur);
+        
+        // Instanciation et génération de la vueF
+        $vue = new Vue($this->action, $controleur);
         $vue->generer($donneesVue);
-    }
-
-    /**
-     * Effectue une redirection vers un contrôleur et une action spécifiques
-     * 
-     * @param string $controleur Contrôleur
-     * @param type $action Action Action
-     */
-    protected function rediriger($controleur, $action = null)
-    {
-        $racineWeb = Configuration::get("racineWeb", "/");
-        // Redirection vers l'URL /racine_site/controleur/action
-        header("Location:" . $racineWeb . $controleur . "/" . $action);
     }
 
 }
