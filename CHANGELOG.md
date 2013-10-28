@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-* 1.1.0
+* 1.1.0 (2013-10-28)
 
  * Formatage du code selon les standards [php-fig] (http://www.php-fig.org/psr/psr-2/)
  * Gestion des sessions
