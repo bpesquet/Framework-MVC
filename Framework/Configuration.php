@@ -21,8 +21,9 @@ class Configuration
      */
     public static function get($nom, $valeurParDefaut = null)
     {
-        if (isset(self::getParametres()[$nom])) {
-            $valeur = self::getParametres()[$nom];
+        $parametres = self::getParametres();
+        if (isset($parametres[$nom])) {
+            $valeur = $parametres[$nom];
         }
         else {
             $valeur = $valeurParDefaut;
@@ -55,4 +56,6 @@ class Configuration
     }
 
 }
+
+
 
